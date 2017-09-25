@@ -1,4 +1,5 @@
-# Modern jQuery Lite Framework
+# Modern jQuery Lite Framework 
+## A light weight jQuery without legacy support
 
 ## Steps
 0. Initialize module
