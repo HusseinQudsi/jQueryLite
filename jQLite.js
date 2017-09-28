@@ -96,32 +96,59 @@
             (() => {
 
                 return {
-                    html
+                    html,
+                    addClass,
+                    removeClass,
+                    toggleClass,
+                    hasClass
                 };
 
-                /**
-                 * Name: html
-                 * @param {get} from, where the error is coming from.
-                 * @param {set} message, why the error occurred.
-                 * Description: gets or sets the elements innerHTML.
-                 * */
-                function html(get, set) {
+                function html(set) {
 
-                    if (set) {
-                        // TODO continue here...
+                    // Setting the innterHTML of the first element, if set param is defined.
+                    if (_helper.typeofFnc(set, 'string')) {
+                        this[0].innerHTML = set;
                     }
-
+                    // Returning a array of HTML elements with a object containing the element and it's innerHTML value.
                     else {
-                        var innerHTML = {};
+                        var innerHTML = [];
 
-                        _helper.each(this, (el, index) => {
-                            innerHTML[index] = el.innerHTML;
-                        });
+                        _helper.each(this, (el) => innerHTML.push({
+                            el,
+                            innerHTML: el.innerHTML
+                        }));
 
                         return innerHTML;
                     }
                 }
 
+                function addClass(set) {
+                    if (_helper.typeofFnc(set, 'string')) {
+                        this[0].classList.add(set);
+                    }
+                    return this;
+                }
+
+                function removeClass(set) {
+                    if (_helper.typeofFnc(set, 'string')) {
+                        this[0].classList.remove(set);
+                    }
+                    return this;
+                }
+
+                function toggleClass(set) {
+                    if (_helper.typeofFnc(set, 'string')) {
+                        this[0].classList.toggle(set);
+                    }
+                    return this;
+                }
+
+                function hasClass(set) {
+                    if (_helper.typeofFnc(set, 'string')) {
+                        this[0].classList.contains(set);
+                    }
+                    return this;
+                }
             })(),
 
             // Initialize module
@@ -243,6 +270,7 @@
 
 })(window, window.$, undefined);
 
-debugger;
 var h1 = jQuery('h1');
-var ttt = h1.html();
+var ttt = h1.html('helllllo');
+debugger;
+h1.removeClass('red');
