@@ -1,15 +1,13 @@
-# Modern jQuery Lite Framework 
-## A light weight jQuery without legacy support
+# Hussein Qudsi Technologies
+A Light weight, modern, JQuery library with zero dependency. 
 
-## Steps
-0. Initialize module
-    * via _initModule module
-2. Checking if jQuery is already defined
-    * via jQueryExists function
-3.  Checking if jQuery is already defined
-    * via defineJQuery function
-4.  Exposing jQuery to global 
-    * via exposeToWindow function
-    
-    
-    
+## Playground
+[code-pen playground](https://codepen.io/HusseinQudsi/pen/jOrNBQZ)
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

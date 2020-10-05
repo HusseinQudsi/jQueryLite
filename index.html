@@ -1,20 +1,65 @@
+<!--
+DEV: Hussein Q.
+updatedOn: 10/04/2020
+GitHub: https://github.com/HusseinQudsi
+Purpose: Modern jQuery Lite Framework, with zero dependencies.
+-->
 <!DOCTYPE html>
-<html lang="en" data-ng-app="myApp">
-<head>
-    <title>hQuery Lite</title>
-    <style>
-        .red {
-            color: red;
-        }
-    </style>
-</head>
-    <body>
-        <header>
-            <h1 class="red">testing A</h1>
-            <h1>testing B</h1>
-            <h1>testing C</h1>
-        </header>
+<html>
+    <head>
+        <title>Modern jQuery Lite Framework</title>
+        <meta name="author" content="Hussein Qudsi">
+        <meta name="referrer" content="strict-origin">
+        <meta name="Modern jQuery Lite Framework" value="notranslate">
+        <meta charset="UTF-8">
+        <meta name="title" content="odern jQuery Lite Framework, with zero dependencies.">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="language" content="English">
+        <script src="jQuery.js"></script>
+        <style>
+            .style-me {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                color: #666;
+            }
+        </style>
+    </head>
 
-        <script src="jQLite.js"></script>
+    <body>
+        <h1>JQuery, do your magic.</h1>
+
+        <script>
+            "use strict";
+
+            (function () {
+
+                // jQuery Lite Framework usage:
+                var $h1 = jQuery('h1');
+
+                // 1. User jQuery utility methods, including:
+                // - errorHandler
+                // - typeofFnc
+                // - isArrayLike
+                // - extend
+                // - each (or forEach)
+                var isArrayLIke = jQuery.isArrayLike($h1);
+                console.log(isArrayLIke);
+
+                // 2. User jQuery utility methods, including:
+                // - html
+                // - addClass
+                // - removeClass
+                // - toggleClass
+                // - hasClass
+                $h1.html('hello world!');
+                $h1.addClass('style-me');
+
+            })();
+        </script>
+
     </body>
 </html>
